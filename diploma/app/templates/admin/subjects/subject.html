@@ -1,0 +1,34 @@
+<!-- app/templates/admin/roles/role.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}
+    {% if add_subjects %}
+        Add Subject
+    {% else %}
+        Edit Role
+    {% endif %}
+{% endblock %}
+{% block body %}
+<div class="content-section">
+ <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="center">
+            {% if add_subject %}
+<div class="alert alert-success" role="alert">
+<h3><center>Add Subject</h3></center>
+</div>
+            {% else %}
+        <div class="alert alert-success" role="alert">        
+<h3><center>Edit Subject</center></h3>
+</div>
+            {% endif %}
+            <br/>
+            {{ wtf.quick_form(form) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

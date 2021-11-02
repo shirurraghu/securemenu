@@ -1,0 +1,33 @@
+<!-- app/templates/admin/departments/department.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}
+    {% if add_iamark %}
+        Add Branch
+    {% else %}
+        Edit IA Marks
+    {% endif %}
+{% endblock %}
+{% block body %}
+<div class="content-section">
+ <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="center">
+            {% if add_iamark %}
+       <div class="alert alert-success" role="alert">         
+<h3><center>Add IA Marks</center></h3>
+</div>
+            {% else %}
+<div class="alert alert-success" role="alert">                
+<h3><center>Edit IA Marks</center></h3></div>
+            {% endif %}
+            <br/>
+            {{ wtf.quick_form(form) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

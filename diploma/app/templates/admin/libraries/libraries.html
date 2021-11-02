@@ -1,0 +1,75 @@
+
+{% import "bootstrap/utils.html" as utils %}
+{% extends "base.html" %}
+{% block title %}Books{% endblock %}
+{% block body %}
+<div class="content-section">
+      <div class="inner">
+        {{ utils.flashed_messages() }}
+<br>
+       <div class="col-md-2"> 
+<ul class="list-group">
+<li class="list-group-item">
+<a href="{{ url_for('admin.add_libraries') }}">
+<i class="glyphicon glyphicon-book"> </i> &nbspAdd Book</a></li>
+
+<li class="list-group-item">
+<a href="{{ url_for('admin.assign_book') }}"> <i class="glyphicon glyphicon-book"> </i> &nbsp Issue Book </a></li>
+
+</div>
+
+<div class="col-md-10">
+<div class="alert" style="background-color:#FF8C00"><h3 style="text-align:center;">Books</h3></div>
+        {% if libraries %}
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th> Register Number </th>
+                  <th> Book Name </th>
+                  <th> Author </th>
+                  <th> Publisher </th>
+                  <th> Edit </th>
+                  <th> Delete </th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for library in libraries %}
+                <tr>
+                  <td> {{ library.regnum }} </td>
+                  <td> {{ library.title }} </td>
+                  <td> {{ library.author }} </td>
+                  <td> {{ library.publisher }} </td>
+                    {% if library.students %}
+                      {{ library.students.count() }}
+                    {% else %}
+
+                    {% endif %}
+                  </td>
+                  <td>
+                    <a href="{{ url_for('admin.edit_library', id=library.id) }}">
+ <i class="glyphicon glyphicon-pencil text-success" color="black"></i>                   
+</a>
+                  </td>
+                  <td>
+                    <a href="{{ url_for('admin.delete_library', id=library.id) }}">
+<i class="glyphicon glyphicon-remove text-danger"></i>                     
+</a>
+                  </td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          <div style="text-align: center">
+        {% else %}
+          <div style="text-align: center">
+            <h3> No Books have been added. </h3>
+            <hr class="intro-divider">
+        {% endif %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

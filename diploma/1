@@ -1,0 +1,2 @@
+SECRET_KEY = 'asdj0-2183-jlkas99e9>(#!.>ASD:<:>'
+SQLALCHEMY_DATABASE_URI = 'mysql://rash:rash@123@localhost/rash'

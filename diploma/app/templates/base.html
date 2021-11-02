@@ -1,0 +1,43 @@
+/!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }} | Project Student Database</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" style="background-color:#4B0082;">
+        <div class="container topnav">
+              <ul class="nav navbar-nav navbar-right">
+{% if current_user.is_authenticated %}
+      {% if current_user.is_admin %}
+        <li><a href="{{ url_for('home.admin_dashboard') }}"><font-color="#ffffff">Dashboard</font></a></li>
+        <li><a href="{{ url_for('admin.list_branches') }}">Branches</a></li>
+        <li><a href="{{ url_for('admin.list_roles') }}">Roles</a></li>
+        <li><a href="{{ url_for('admin.list_students') }}">Assign Role</a></li>
+        <li><a href="{{ url_for('admin.list_students2') }}">Students</a></li>
+        <li><a href="{{ url_for('admin.list_libraries') }}">Library</a></li>
+      {% else %}
+        <li><a href="{{ url_for('admin.branch_stud') }}">Dashboard</a></li>
+      {% endif %}
+      <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+      <li><a><i class="fa fa-user"></i>  Hi, {{ current_user.username }}!</a></li>
+    {% else %}
+      <li><a href="{{ url_for('home.homepage') }}">Home</a></li>
+      <li><a href="{{ url_for('auth.register') }}">Register</a></li>
+      <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+    {% endif %}
+</ul>
+          </div>
+        </div>
+    </nav>
+    {% block body %}
+<div class="col-lg-12">
+<div class="wrapper">
+      
+      {% endblock %}
+      <div class="push"></div>
+    </div>
+</body>
+</html>

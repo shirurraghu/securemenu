@@ -1,0 +1,90 @@
+
+{% import "bootstrap/utils.html" as utils %}
+{% extends "base.html" %}
+{% block title %}Students{% endblock %}
+{% block body %}
+<div class="content-section">
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        {{ utils.flashed_messages() }}
+<br>
+<div class="Col-md-2">
+<ul class="list-group">
+<li class="list-group-item">
+<a href="{{ url_for('admin.add_students2') }}">
+<i class="glyphicon glyphicon-user"> </i> &nbspAdd Student</a></li>
+
+<li class="list-group-item">
+<a href="{{ url_for('admin.add_iamarks') }}"> <i class="glyphicon glyphicon-th-list"> </i> &nbsp Add IAMarks </a></li>
+
+<li class="list-group-item">
+<a href="{{ url_for('admin.add_subjects') }}"> <i class="glyphicon glyphicon-th-tags"> </i> &nbsp Add Subject </a></li>
+</div>
+
+
+<div class="col-md-10">
+<div class="alert" style="background-color:#FF8C00"><h3 style="text-align
+        <div class="alert alert-success" role="alert"><h3 style="text-align:center;">Students</h3></div>
+
+ <div class="">
+                  <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+
+                      <input id="gfg" type="text" placeholder="Search here">
+
+                <button onclick="window.print()">Print</button>
+
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th> Register Number </th>
+                  <th> Student Name </th>
+                  <th> Date of Birth </th>
+                  <th> Gender </th>
+                  <th> Father Name </th>
+                  <th> Mobile # </th>
+                  <th> Semister </th>
+                  <th> Caste </th>
+                  <th> Branch </th>
+                </tr>
+              </thead>
+              <tbody id="geeks">
+              {% for student2 in students2 %}
+                <tr>
+                  <td> {{ student2['regnum'] }} </td>
+                  <td> {{ student2.sname }} </td>
+                  <td> {{ student2.dob }} </td>
+                  <td> {{ student2.gender }} </td>
+                  <td> {{ student2.father }} </td>
+                  <td> {{ student2.mobile }} </td>
+                  <td> {{ student2.semister }} </td>
+                  <td> {{ student2.caste }} </td>
+                  <td> {{ student2.branch }} </td>
+                  <td>
+              {% endfor %}
+              </tbody>
+            </table>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+            $(document).ready(function() {
+                $("#gfg").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#geeks tr").filter(function() {
+                        $(this).toggle($(this).text()
+                        .toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../static/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../static/js/bootstrap.bundle.min.js"></script>
+      <script src="../static/js/offcanvas.js"></script>
+{% endblock %}

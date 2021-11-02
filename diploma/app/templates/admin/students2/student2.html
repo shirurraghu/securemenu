@@ -1,0 +1,30 @@
+<!-- app/templates/admin/departments/department.html -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}
+    {% if add_student2 %}
+        Add Student
+    {% else %}
+        Edit Student
+    {% endif %}
+{% endblock %}
+{% block body %}
+<div class="content-section">
+ <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="center">
+            {% if add_student2 %}
+               <div class="alert alert-success" role="alert"> <h3>Add Student</h3></div>
+            {% else %}
+               <div class="alert alert-success" role="alert"> <h3>Edit Student</h3></div>
+            {% endif %}
+            <br/>
+            {{ wtf.quick_form(form) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
