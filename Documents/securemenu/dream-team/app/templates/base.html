@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title> Securemenu  </title>
+      <meta name="description" content="Source code generated using layoutit.com">
+      <meta name="author" content="LayoutIt!">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- <link rel="stylesheet" href="{{ url_for('static', filename='static/css/style.css') }}"> -->
+      <style>
+body{
+background: url(../static/images/bg.png);
+/* background-image: linear-gradient(#614092, #7952b3) !important; */
+background-color: #614092 !important;
+/* background-color: #f8f6f2 !important; */
+}
+.welcometext{
+color: #fff !important;
+}
+.outer_profile{
+    color: #fff !important;
+    font-weight: 100 !important;
+
+}
+
+.reji{
+    max-width: 1000px;
+margin: 0 auto; 
+background-color: #f8f6f391;
+padding: 20px 60px 60px 60px ;
+margin-top: 20px;
+border-bottom: 5px solid #f9bc1c;
+border-radius: 10px;
+}
+label {
+    font-weight: 400 !important;
+}
+
+.content-section{
+
+}
+
+
+.form-control{
+/* background-color: #b8b8b8 !important; */
+}
+.table {
+width: 800px;
+max-width: 100%;
+margin-bottom: 20px;
+}
+.container{
+width: 100% !important;
+background-image: url(../images/bg.png);
+}
+h1 {
+font-size: 24px;
+color: #3d3e60 !important;
+font-weight: 400 !important;
+}
+.bottom_text{
+margin-left: 100px;
+}
+tr{
+height: 45px !important;
+}
+td{
+line-height: 30px !important;
+}
+.navbar-default{
+border: none !important;
+}
+.navbar {
+border-radius: 0px !important;
+}
+/* .container {
+padding-left: unset !important;
+padding-right: unset !important;
+margin-left: unset !important;
+margin-right: unset !important;
+max-width: 100% !important;
+overflow: hidden;
+} */
+.footer {
+height: 100px;
+background-color: #222b37;
+font-size: 12px;
+color: #969696;
+height: 100px;
+background-color: #222b37;
+padding: 28px 0px 0px 100px;
+font-weight: 400;
+}
+.btn-default {
+color: rgb(247, 244, 244) !important;
+background-color: #3D3E60 !important;
+border: none !important;
+}
+.nav a{
+color: #fff !important;
+}
+.nav a:hover{
+color: #e0dede !important;
+}
+a {
+color: #635ac6 !important;
+text-decoration: none;
+}
+.form-control{
+height: 40px !important;
+border: none !important;
+box-shadow: none !important;
+}
+.w-100 {
+position:fixed;
+left:0px;
+bottom:0px;
+}
+.footerright{
+/* background-image: url(../static/images/bg.png); */
+background-color: #563d7c;}
+.navbar-default {
+border-top: #322348 5px;
+background-color: #563d7c !important;
+height: 60px;
+color: #fff;
+line-height: 30px;
+}
+.navbar-right{
+margin-top: 24px !important;
+color: white !important;
+}
+.nav navbar-nav{
+line-height: 70px;
+margin-top: 24px !important;
+}
+.navbar-nav {
+float: left;
+margin: 0;
+margin-top: 4px !important;
+}
+.logo{
+width: 40px;
+margin-left: 0px;
+margin-top: -6px;
+}
+.table{
+width: 1000px;
+margin: 0 auto; 
+background-color: #f4f6f6;
+padding: 60px;
+margin-top: 20px;
+}
+/* 
+.nav-container{
+background-color: #222b37;
+height: 100px;
+color: #fff;
+}
+.navbar-light .navbar-brand, .navbar-light .navbar-toggler {
+color: rgb(251 251 251 / 90%);
+line-height: 80px;
+}
+.nav-container a{
+color: #ffffff;
+}
+.header-2 {
+background-color: #506075;
+height: 20px;
+} */
+/* .navbar-collapse {
+background-color: teal !important;
+}
+*/
+.outer_profile{
+max-width: 1000px;
+margin: 0 auto; 
+/* background-color: #f4f6f6; */
+padding: 60px 60px;
+margin-top: 20px;
+height: 600px;
+text-align: center !important;
+vertical-align: middle;
+}
+.food{
+width:400px;
+}
+.outer{
+max-width: 1000px;
+margin: 0 auto; 
+background-color: #f8f6f391;
+padding: 20px 60px 60px 60px ;
+margin-top: 20px;
+border-bottom: 5px solid #f9bc1c;
+border-radius: 10px;
+}
+
+
+
+
+/* .outer{
+    
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #f8f6f380;
+  }
+  100% {
+    background-color:f8f6f391;
+  }
+} */
+
+
+
+
+
+.table-hover {
+    max-width: 1000px !important;
+margin: 0 auto; 
+background-color: #f8f6f391;
+padding: 20px 60px 60px 60px  !important;
+margin-top: 20px !important;
+border-bottom: 5px solid #f9bc1c;
+/* border-radius: 10px !important; */
+}
+
+
+.pager{
+ visibility: hidden;
+}
+
+
+
+.m-p{
+width: 1000px !important;
+margin: 60px !important;
+margin: 0 auto; 
+text-align: -webkit-center;
+}
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+.mainimage {
+max-width: 300px
+}
+.navbar-nav {
+background-color: #F9522E;
+margin: 7.5px -15px;
+}
+.topboder{
+height: 20px;
+background-color: #322348 !important;
+}
+.outer {
+margin: 0 auto;
+background-color: #f4f6f6;
+padding: 10px;
+margin-top: 20px;
+vertical-align: middle;
+}
+.food{
+width:300px;
+}
+.outer {
+margin: 0 auto;
+background-color: #f4f6f6;
+padding: 10px;
+margin-top: 20px;
+}
+.live{ max-width: 300px
+}
+}
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+.food{
+width:300px;
+}
+.navbar-nav {
+background-color: rgb(25, 33, 33);
+margin: 7.5px -15px;
+}
+.outer {
+margin: 0 auto;
+background-color: #f4f6f6;
+padding: 30px;
+margin-top: 20px;
+}
+.reji{
+width: 30%
+}
+.st {
+top: 50vh;
+position: fixed;
+left: -43px;
+top: 32%;
+transform: translate3d(0px, -52%, 0px) rotate(90deg);
+z-index: 500;
+color: #3a0d44;
+font-size: 10px;
+}
+}
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+.normaltext {
+display: table;
+color: #000;
+font-size: 12px;
+font-weight: 100;
+/* display: initial; */
+text-transform: none;
+padding-top: 11px;
+text-align: left;
+}
+.navbar-nav {
+background-color: rgb(25, 33, 33);
+margin: 7.5px -15px;
+}
+.outer {
+margin: 0 auto;
+background-color: #f4f6f6;
+padding: 30px;
+margin-top: 20px;
+}
+}
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+.food{
+width:300px;
+}
+.navbar-nav {
+background-color: rgb(25, 33, 33);
+margin: 7.5px -15px;
+}
+.outer {
+margin: 0 auto;
+background-color: #f4f6f6;
+padding: 30px;
+margin-top: 20px;
+}
+}
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+.himage {
+width: 300px;
+padding-bottom: 30px;
+}
+.navbar-nav {
+background-color: rgb(25, 33, 33);
+margin: 7.5px -15px;
+}
+.food{
+width:300px;
+}
+}
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+.mainimage {
+width: 80px;
+margin-top: 100px;
+}
+.navbar-nav {
+background-color: rgb(25, 33, 33);
+margin: 7.5px -15px;
+}
+}
+
+      </style>
+   </head>
+   <body>
+
+
+    <div class="container">
+    </div>
+
+      {% extends 'bootstrap/base.html' %}
+      {% block title %}
+      {% if title %}{{ title }} - Securemenu{% else %}{{ _('Welcome to Securemenu') }}{% endif %}
+      {% endblock %}
+      {% block navbar %}
+      <nav class="navbar navbar-default">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="{{ url_for('main.index') }}"> <img src="../static/images/menu_logo.png" class="logo"> </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+                  <li><a href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
+               </ul>
+               {% if g.search_form %}
+               <form class="navbar-form navbar-left" method="get" action="{{ url_for('main.search') }}">
+                  <div class="form-group">
+                     {{ g.search_form.q(size=50, class='form-control', placeholder=g.search_form.q.label.text) }}
+                  </div>
+               </form>
+               {% endif %}
+               <ul class="nav navbar-nav navbar-right">
+                  {% if current_user.is_anonymous %}
+                  <li><a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
+                  {% else %}
+                  <li><a href="{{ url_for('main.list_locations') }}"> Locations</a></li>
+                  <li><a href="{{ url_for('main.list_groups') }}">Groups</a></li>
+                  <li><a href="{{ url_for('main.list_menutypes') }}">Menu Types</a></li>
+                  <li><a href="{{ url_for('main.list_textmenus') }}">Text Menu</a></li>
+                  <li><a href="{{ url_for('main.list_foods') }}">Food</a></li>
+                  <li><a href="{{ url_for('main.user', username=current_user.username) }}">{{ _('Profile') }}</a></li>
+                  <li><a href="{{ url_for('auth.logout') }}">{{ _('Logout') }}</a></li>
+                  {% endif %}
+               </ul>
+            </div>
+         </div>
+      </nav>
+
+<div class="Aligner">
+
+
+      {% endblock %}
+      {% block content %}
+      <div class="container">
+         {% with messages = get_flashed_messages() %}
+         {% if messages %}
+         {% for message in messages %}
+         <div class="alert alert-info outer" role="alert">{{ message }}</div>
+         {% endfor %}
+         {% endif %}
+         {% endwith %}
+         {# application content needs to be provided in the app_content block #}
+         {% block app_content %}{% endblock %}
+      </div>
+      {% endblock %}
+      {% block scripts %}
+      {{ super() }}
+      {{ moment.include_moment() }}
+      {{ moment.lang(g.locale) }}
+
+
+    </div>
+
+      <div class="w-100 container">
+         <div class="row footerright">
+            <div class="col-md-7 col-12 footer">
+               <div class="bottomtext">   www.securemenus.com   |  Home  |   FAQ  |   Terms & Conditions  |  Privacy Policy  |  Contact Us <br>
+                  Copyright © 2020 All rights reserved.
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/scripts.js"></script>
+   </body>
+</html>
+<script>
+   function translate(sourceElem, destElem, sourceLang, destLang) {
+       $(destElem).html('<img src="{{ url_for('static', filename='loading.gif') }}">');
+       $.post('/translate', {
+           text: $(sourceElem).text(),
+           source_language: sourceLang,
+           dest_language: destLang
+       }).done(function(response) {
+           $(destElem).text(response['text'])
+       }).fail(function() {
+           $(destElem).text("{{ _('Error: Could not contact server.') }}");
+       });
+   }
+   $(function () {
+       var timer = null;
+       var xhr = null;
+       $('.user_popup').hover(
+           function(event) {
+               // mouse in event handler
+               var elem = $(event.currentTarget);
+               timer = setTimeout(function() {
+                   timer = null;
+                   xhr = $.ajax(
+                       '/user/' + elem.first().text().trim() + '/popup').done(
+                           function(data) {
+                               xhr = null;
+                               elem.popover({
+                                   trigger: 'manual',
+                                   html: true,
+                                   animation: false,
+                                   container: elem,
+                                   content: data
+                               }).popover('show');
+                               flask_moment_render_all();
+                           }
+                       );
+               }, 1000);
+           },
+           function(event) {
+               // mouse out event handler
+               var elem = $(event.currentTarget);
+               if (timer) {
+                   clearTimeout(timer);
+                   timer = null;
+               }
+               else if (xhr) {
+                   xhr.abort();
+                   xhr = null;
+               }
+               else {
+                   elem.popover('destroy');
+               }
+           }
+       );
+   });
+   function set_message_count(n) {
+       $('#message_count').text(n);
+       $('#message_count').css('visibility', n ? 'visible' : 'hidden');
+   }
+   {% if current_user.is_authenticated %}
+   $(function() {
+       var since = 0;
+       setInterval(function() {
+           $.ajax('{{ url_for('main.notifications') }}?since=' + since).done(
+               function(notifications) {
+                   for (var i = 0; i < notifications.length; i++) {
+                       if (notifications[i].name == 'unread_message_count')
+                           set_message_count(notifications[i].data);
+                       since = notifications[i].timestamp;
+                   }
+               }
+           );
+       }, 10000);
+   });
+   {% endif %}
+</script>
+{% endblock %}

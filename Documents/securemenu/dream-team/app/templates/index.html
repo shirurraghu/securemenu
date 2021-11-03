@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+	<!-- <link href="static/css/style.css" rel="stylesheet"> -->
+	
+
+
+
+
+
+  </head>
+  <body>
+
+
+
+<div class="welcometext">
+
+    
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+
+
+    <h1 class="outer_profile"><img src="../static/images/food.svg" class="food">
+        <div><h3> welcome </h3><h4>Consumer-Friendly, Contactless Menu Experience</h4>
+    </div>
+        {{ _('Hi, %(username)s!', username=current_user.username) }} 
+    
+    </h1>
+   
+    
+{% endblock %}
+
+
+</div>
+
+
+

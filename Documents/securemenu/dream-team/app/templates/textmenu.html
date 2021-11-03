@@ -1,0 +1,41 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+
+{% block title %}
+    {% if add_menutype %}
+        Add Text Menu
+    {% else %}
+        Edit Menu
+    {% endif %}
+{% endblock %}
+{% block body %}
+<div class="content-section">
+ <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="center">
+            {% if add_location %}
+                <h1>Add Text Menu</h1>
+            {% else %}
+                <h1>Edit Menu</h1>
+            {% endif %}
+            <br/>
+            {{ wtf.quick_form(form) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="w-100 container">
+    <div class="row footerright">
+        <div class="col-md-7 col-12 footer">
+                www.securemenus.com   |  Home  |   FAQ  |   Terms & Conditions  |  Privacy Policy  |  Contact Us <br>
+               Copyright © 2020 All rights reserved.
+                
+        </div>
+    </div>
+</div>
+
+{% endblock %}
